@@ -4,7 +4,7 @@ import Dropdwon from './dropdown'
 
 function App() {
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto px-8">
       <header className="flex justify-center py-16 text-2xl">
         <h1 className="">Vite Playground</h1>
       </header>
