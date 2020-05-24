@@ -8,6 +8,9 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         system: defaultTheme.fontFamily.sans,
       },
+      inset: {
+        full: '100%',
+      },
     },
   },
   variants: {},
