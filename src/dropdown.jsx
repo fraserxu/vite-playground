@@ -11,6 +11,7 @@ const Dropdown = () => {
   const opacity = isOpen === null ? 0 : isOpen ? 0 : 1
 
   const props = useSpring({
+    display: isOpen ? 'block' : 'none',
     opacity: isOpen ? 1 : 0,
     from: { opacity },
   })
