@@ -2,18 +2,19 @@ import React, { useState, useCallback } from 'react'
 import { useSpring, animated } from 'react-spring'
 
 const Dropdown = () => {
-  const [isOpen, setOpen] = useState(null)
+  const [isOpen, setOpen] = useState(false)
 
   const handleClick = useCallback(() => {
     setOpen(!isOpen)
   }, [isOpen, setOpen])
 
-  const opacity = isOpen === null ? 0 : isOpen ? 0 : 1
+  const opacity = isOpen ? 0 : 1
+  const transform = isOpen ? 'scaleY(1)' : 'scaleY(0)'
 
   const props = useSpring({
-    display: isOpen ? 'block' : 'none',
     opacity: isOpen ? 1 : 0,
-    from: { opacity },
+    transform,
+    from: { opacity, transform },
   })
 
   return (
